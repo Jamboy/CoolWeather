@@ -90,7 +90,7 @@ public class ChooseAreaFragment extends Fragment {
      * @param 
      * @return 
      * @author: Kivia
-     * @date: 2020/11/17 23:13
+     * @date: 2020/11/17 23:18
      */
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
