@@ -1,6 +1,8 @@
 package com.example.coolweather.fragment;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.coolweather.R;
+import com.example.coolweather.activity.WeatherActivity;
 import com.example.coolweather.db.City;
 import com.example.coolweather.db.County;
 import com.example.coolweather.db.Province;
@@ -58,6 +61,7 @@ public class ChooseAreaFragment extends Fragment {
 
     private Province selectedProvince;
     private City selectedCity;
+    private County selectedCounty;
     private int currentLevel;
     private String address = "http://guolin.tech/api/china";
 //    private String address = "http://www.baidu.com";
@@ -104,6 +108,12 @@ public class ChooseAreaFragment extends Fragment {
                 } else if (currentLevel == LEVEL_CITY) {
                     selectedCity = cityList.get(position);
                     queryCounty();
+                } else if (currentLevel == LEVEL_COUNTY) {
+                    selectedCounty = countyList.get(position);
+                    Intent intent = new Intent(getActivity(), WeatherActivity.class);
+                    intent.putExtra("weather_id",selectedCounty.getWeatherId());
+                    startActivity(intent);
+                    getActivity().finish();
                 }
             }
         });

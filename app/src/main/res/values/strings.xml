@@ -3,4 +3,12 @@
     <string name="CHINA">中国</string>
     <string name="load_fail">加载失败</string>
     <string name="loding">正在加载</string>
+    <string name="forecast">预报</string>
+    <string name="aqi">空气质量</string>
+    <string name="aqi_index">AQI指数</string>
+    <string name="suggestion">生活建议</string>
+    <string name="pm25Txt">PM2.5指数</string>
+    <string name="get_weather_failure">获取天气失败</string>
+    <string name="get_bing_img_failure">获取背景图失败</string>
+
 </resources>

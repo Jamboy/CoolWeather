@@ -9,9 +9,9 @@ package com.example.coolweather.gson;
  * @Modified remark:
  */
 public class AQI {
-    public  AQICity city;
+    public AQICity city;
 
-    private class AQICity {
+    public class AQICity {
         public String aqi;
         public String pm25;
     }
